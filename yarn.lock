@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@auth/core@0.41.2":
-  version "0.41.2"
-  resolved "https://registry.yarnpkg.com/@auth/core/-/core-0.41.2.tgz#c03f14426bcd6e06c1ba4f767e46914a23f4d376"
-  integrity sha512-Hx5MNBxN2fJTbJKGUKAA0wca43D0Akl3TvufY54Gn8lop7F+34vU1zA1pn0vQfIoVuLIrpfc2nkyjwIaPJMW7w==
+"@auth/core@0.41.3":
+  version "0.41.3"
+  resolved "https://registry.yarnpkg.com/@auth/core/-/core-0.41.3.tgz#9c03e881feb589d3e807b764c050b32e350fce51"
+  integrity sha512-sJ3JMHHkXMD3aOjopv7mOBTO1Ocw4b0fAEXJBz6k7YHLpYQI6C40jCUPc5fNvUKxXRXNE1/sRISA15UrwWJBTw==
   dependencies:
     "@panva/hkdf" "^1.2.1"
     jose "^6.0.6"
@@ -18,12 +18,12 @@
     preact "10.24.3"
     preact-render-to-string "6.5.11"
 
-"@auth/mongodb-adapter@^3.9.1":
-  version "3.11.2"
-  resolved "https://registry.yarnpkg.com/@auth/mongodb-adapter/-/mongodb-adapter-3.11.2.tgz#cc6187ed743a558062842489718a5e4659d22fb2"
-  integrity sha512-3yKYvPB/7NjDN5VW6iymEdQEKQOezqVpev4heAhN+zxz5G/jOIQdxBu8iF8nIomF8ggY+FRDqysSNwb72JM6dw==
+"@auth/mongodb-adapter@^3.11.3":
+  version "3.11.3"
+  resolved "https://registry.yarnpkg.com/@auth/mongodb-adapter/-/mongodb-adapter-3.11.3.tgz#a29c1e73ef18d23ba3eecb2135c01739dc3e42fb"
+  integrity sha512-Fgecjf24MLo1975qKjeFhdiFLC4NGwpfCScS/LFqCTo7rIesxLyNqVZzSwtPiSizWlncCAQf3gURlQLK16DRIg==
   dependencies:
-    "@auth/core" "0.41.2"
+    "@auth/core" "0.41.3"
 
 "@babel/runtime@^7.20.13":
   version "7.29.7"
@@ -2193,9 +2193,9 @@ flatted@^3.2.9:
   integrity sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==
 
 follow-redirects@^1.16.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.16.0.tgz#28474a159d3b9d11ef62050a14ed60e4df6d61bc"
-  integrity sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.16.1.tgz#6e0efa40a727fb369b98dab15883ec34787d675e"
+  integrity sha512-FNvFGzoMLWmE6Yj9spb/zjd7yiNCHiAW9/Tg9CXrQ8wuu32HtlJOwWO11OJafl5FfY3DxTdQ0vj42zU1kvv5jg==
 
 for-each@^0.3.3, for-each@^0.3.5:
   version "0.3.5"
@@ -4106,12 +4106,7 @@ slice-ansi@^8.0.0:
     ansi-styles "^6.2.3"
     is-fullwidth-code-point "^5.1.0"
 
-source-map-js@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.1.tgz#1ce5650fddd87abc099eda37dcff024c2667ae46"
-  integrity sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==
-
-source-map-js@^1.2.2:
+source-map-js@^1.2.1, source-map-js@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.2.tgz#79fb88d97535a21cb27162cb05d211b67acea4ab"
   integrity sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==
