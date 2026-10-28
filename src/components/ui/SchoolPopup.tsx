@@ -32,12 +32,12 @@ function Toggle({
   return (
     <div className="text-left">
       <div className={labelClass}>{label}</div>
-      <div className="grid grid-cols-2 h-12 p-1 gap-1 bg-white/70 rounded-xl border-2 border-black">
+      <div className="grid grid-cols-2 h-12 p-1 gap-1 bg-white/70 rounded-2xl border-[2.5px] border-black">
         {options.map(option => (
           <button
             key={option}
             onClick={() => onChange(option)}
-            className={`px-4 rounded-lg text-sm whitespace-nowrap cursor-pointer border-[1.5px] ${
+            className={`px-4 rounded-[9.5px] text-sm whitespace-nowrap cursor-pointer border-[1.5px] ${
               value === option
                 ? 'bg-ffcs-yellow border-black font-semibold'
                 : 'border-transparent text-ffcs-muted font-medium'
@@ -113,7 +113,7 @@ export default function SchoolPopup({
             <div className={labelClass}>School</div>
             <label
               htmlFor="school-search"
-              className="flex items-center h-12 px-3 bg-white/70 rounded-xl border-2 border-black font-medium"
+              className="flex items-center h-12 px-4 bg-white/70 rounded-2xl border-[2.5px] border-black font-medium"
             >
               <span className={`truncate ${picked ? '' : 'text-ffcs-muted'}`}>
                 {picked
@@ -132,7 +132,7 @@ export default function SchoolPopup({
         </div>
         <div className="flex gap-5 text-left">
           <div
-            className={`flex flex-col w-[520px] h-[448px] shrink-0 p-2.5 bg-white/70 rounded-xl border-2 border-black shadow-hard ${locked}`}
+            className={`flex flex-col w-[520px] h-[448px] shrink-0 p-2.5 bg-white/70 rounded-2xl border-[2.5px] border-black shadow-hard ${locked}`}
           >
             <input
               id="school-search"
@@ -140,14 +140,14 @@ export default function SchoolPopup({
               value={query}
               onChange={e => setQuery(e.target.value)}
               placeholder={'Search by code or name, e.g. "comp", "mech"…'}
-              className="h-10 shrink-0 px-3 rounded-lg bg-ffcs-page text-sm font-medium outline-none placeholder:text-ffcs-muted"
+              className="h-10 shrink-0 px-3 rounded-[3.5px] bg-ffcs-page text-sm font-medium outline-none placeholder:text-ffcs-muted"
             />
             <ul className="flex-1 mt-0.5 space-y-0.5 overflow-y-auto">
               {options.map(key => (
                 <li
                   key={key}
                   onClick={() => setPicked(key)}
-                  className={`flex items-center gap-3 h-10 px-3 rounded-lg text-sm cursor-pointer hover:bg-ffcs-yellow ${
+                  className={`flex items-center gap-3 h-10 px-3 rounded-[3.5px] text-sm cursor-pointer hover:bg-ffcs-yellow ${
                     picked === key ? 'bg-ffcs-yellow' : ''
                   }`}
                 >
@@ -188,7 +188,7 @@ export default function SchoolPopup({
                   } ${vtopOn || vtopBusy ? 'bg-ffcs-blue' : 'bg-ffcs-red'}`}
                 >
                   <span
-                    className={`absolute top-1/2 -translate-y-1/2 h-[24px] w-[24px] rounded-[8px] border border-black bg-white transition-all duration-100 ${
+                    className={`absolute top-1/2 -translate-y-1/2 h-[24px] w-[24px] rounded-[6px] border border-black bg-white transition-all duration-100 ${
                       vtopOn || vtopBusy ? 'right-1' : 'left-1'
                     }`}
                   />
