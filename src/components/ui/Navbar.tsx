@@ -47,7 +47,11 @@ export default function Navbar({ page, school, vtopOn, onSchoolClick }: NavbarPr
           type="logout"
           closeLink={() => setShowLogoutPopup(false)}
           action={() => {
-            localStorage.removeItem('school');
+            try {
+              localStorage.removeItem('school');
+            } catch {
+              // Storage is blocked, so there is nothing to forget.
+            }
             signOut({ callbackUrl: '/' });
           }}
         />
@@ -72,7 +76,6 @@ export default function Navbar({ page, school, vtopOn, onSchoolClick }: NavbarPr
                     <ZButton
                       type="long"
                       text={school}
-                      color="blue"
                       forceColor="#FFFFFF"
                       image="/icons/chevron_down.svg"
                       imageSize={10}
@@ -164,7 +167,11 @@ export default function Navbar({ page, school, vtopOn, onSchoolClick }: NavbarPr
                 text="Log Out"
                 color="purple"
                 onClick={() => {
-                  localStorage.removeItem('school');
+                  try {
+                    localStorage.removeItem('school');
+                  } catch {
+                    // Storage is blocked, so there is nothing to forget.
+                  }
                   signOut({ callbackUrl: '/' });
                 }}
               />
