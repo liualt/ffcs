@@ -14,7 +14,7 @@ type NavbarProps = {
 };
 
 // Navbar buttons get smaller below xl so the row fits.
-const navButton = 'shrink-0 whitespace-nowrap max-xl:px-4 max-xl:text-sm';
+const navButton = 'shrink-0 whitespace-nowrap max-xl:h-10 max-xl:px-3 max-xl:text-sm';
 
 export default function Navbar({ page, school, vtopOn, onSchoolClick }: NavbarProps) {
   const router = useRouter();
@@ -61,11 +61,13 @@ export default function Navbar({ page, school, vtopOn, onSchoolClick }: NavbarPr
       )}
 
       <div className="absolute top-0 left-0 w-full z-10 select-none">
-        <div className="flex flex-wrap justify-between max-xl:justify-start items-center gap-4 max-xl:gap-3 p-4">
-          <div className="flex flex-1 gap-4 max-xl:gap-3 items-center max-xl:contents">
+        <div className="flex flex-wrap justify-between max-xl:justify-start items-center gap-4 max-xl:gap-2 p-4">
+          <div className="flex flex-1 gap-4 items-center max-xl:contents">
             {(page === 'landing' || page === '404' || page === 'placeholder') && (
               <>
-                <CCButton />
+                <span className="shrink-0 max-xl:[&_img]:w-14">
+                  <CCButton />
+                </span>
 
                 <ZButton
                   type="long"
@@ -123,7 +125,7 @@ export default function Navbar({ page, school, vtopOn, onSchoolClick }: NavbarPr
             )}
           </div>
 
-          <div className="flex gap-4 max-xl:gap-3 items-center max-xl:ml-auto">
+          <div className="flex gap-4 max-xl:gap-2 items-center max-xl:ml-auto">
             {(page === 'landing' || page === '404' || page === 'shared' || page === 'slots') && (
               <ZButton
                 type="long"
