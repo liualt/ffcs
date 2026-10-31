@@ -3,6 +3,8 @@ import './globals.css';
 import SessionProviderWrapper from './SessionProvider';
 import ServiceWorkerRegister from '../components/ServiceWorkerRegister/ServiceWorkerRegister';
 import Script from 'next/script';
+import { ToastProvider } from '@/components/ui/Toast';
+import { Analytics } from '@vercel/analytics/next';
 
 const pangolin = Pangolin({
   weight: '400',
@@ -82,8 +84,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         suppressHydrationWarning
         className={`${pangolin.variable} ${poppins.variable} ${inter.variable} ${plusJakartaSans.variable} antialiased bg-[#CEE4E5] select-none`}
       >
-        <SessionProviderWrapper>{children}</SessionProviderWrapper>
+        <SessionProviderWrapper>
+          <ToastProvider>{children}</ToastProvider>
+        </SessionProviderWrapper>
         <ServiceWorkerRegister />
+        <Analytics />
       </body>
     </html>
   );
